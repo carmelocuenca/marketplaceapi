@@ -20,6 +20,7 @@ doc/
 *.swp
 *~
 .DS_Store
+.idea
 
 # database credentials
 config/database.yml
