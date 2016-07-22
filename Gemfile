@@ -3,11 +3,13 @@ source 'https://rubygems.org'
 ruby '2.2.1'
 #ruby-gemset=market_place_api
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+# Bundle edge Rails instead: gem 'rails', gihub: 'rails/rails'
 gem 'rails', '4.0.5'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :test, :development do
+  gem 'sqlite3'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -32,6 +34,13 @@ end
 
 # Api gems
 gem 'active_model_serializers'
+
+group :production do
+  gem 'rails_12factor'
+  gem 'pg'
+end
+
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
