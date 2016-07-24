@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
-ruby '2.2.1'
+ruby '2.2.4'
 #ruby-gemset=market_place_api
 
 # Bundle edge Rails instead: gem 'rails', gihub: 'rails/rails'
-gem 'rails', '4.0.5'
+gem 'rails', '4.0.6'
 
 # Use sqlite3 as the database for Active Record
 group :test, :development do
@@ -40,6 +40,12 @@ group :production do
   gem 'pg'
 end
 
+group :test do
+  gem 'test-unit' # ???
+  gem "rspec-rails", "~> 2.14"
+  gem "factory_girl_rails"
+  gem 'ffaker'
+end
 
 
 # Use ActiveModel has_secure_password
