@@ -50,6 +50,13 @@ end
 
 gem 'devise'
 
+# Sabisu integration
+gem 'sabisu_rails'
+gem 'compass-rails', '1.1.7'
+gem 'furatto'
+gem 'font-awesome-rails'
+gem 'simple_form'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

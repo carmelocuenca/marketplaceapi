@@ -1,4 +1,4 @@
-# detect `$rvm_path`
+.json# detect `$rvm_path`
 if [ -z "${rvm_path:-}" ] && [ -x "${HOME:-}/.rvm/bin/rvm" ]
 then rvm_path="${HOME:-}/.rvm"
 fi
