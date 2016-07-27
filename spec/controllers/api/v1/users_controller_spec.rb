@@ -1,5 +1,7 @@
 require 'spec_helper'
 describe Api::V1::UsersController do
+
+
   describe "GET #show" do
     before(:each) do
       @user = FactoryGirl.create :user
@@ -12,7 +14,6 @@ describe Api::V1::UsersController do
 
     it { should respond_with 200 }
   end
-
 
   describe "POST #create" do
     context "when is successfully created" do
