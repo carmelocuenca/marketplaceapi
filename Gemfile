@@ -33,7 +33,9 @@ end
 
 
 # Api gems
-gem 'active_model_serializers'
+# After several hours: 0.10.0 version does not work properly
+gem 'active_model_serializers', '0.8.0'
+
 
 group :production do
   gem 'rails_12factor'
@@ -42,7 +44,6 @@ end
 
 group :test do
   gem 'test-unit' # ???
-  gem "rspec-rails"
   gem "shoulda-matchers"
 end
 
