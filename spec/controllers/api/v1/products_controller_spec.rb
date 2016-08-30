@@ -35,7 +35,7 @@ describe Api::V1::ProductsController, type: :controller do
         user = FactoryGirl.create :user
         @product_attributes = FactoryGirl.attributes_for :product
         api_authorization_header user.authentication_token
-        post :create, { user_id: user.id, product: @product_attributes }
+        post :create, { product: @product_attributes }
       end
 
       it "renders the json representation for the product record just created" do
@@ -51,7 +51,7 @@ describe Api::V1::ProductsController, type: :controller do
         user = FactoryGirl.create :user
         @invalid_product_attributes = { title: "Smart TV", price: "Twelve dollars" }
         api_authorization_header user.authentication_token
-        post :create, { user_id: user.id, product: @invalid_product_attributes }
+        post :create, { product: @invalid_product_attributes }
       end
 
       it "renders an errors json" do
@@ -91,7 +91,7 @@ describe Api::V1::ProductsController, type: :controller do
 
     context "when is not updated" do
       before(:each) do
-        patch :update, { user_id: @user.id, id: @product.id,
+        patch :update, { id: @product.id,
                          product: { price: "two hundred" } }
       end
 
@@ -114,7 +114,7 @@ describe Api::V1::ProductsController, type: :controller do
         @user = FactoryGirl.create :user
         @product = FactoryGirl.create :product, user: @user
         api_authorization_header @user.authentication_token
-        delete :destroy, { user_id: @user.id, id: @product.id }
+        delete :destroy, { id: @product.id }
       end
 
       it { should respond_with 204 }
