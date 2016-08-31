@@ -60,6 +60,7 @@ end
 gem 'devise'
 gem 'ransack'
 gem 'kaminari'
+gem 'delayed_job_active_record'
 
 # Sabisu integration
 gem 'sabisu_rails'
