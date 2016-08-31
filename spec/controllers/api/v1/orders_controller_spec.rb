@@ -15,6 +15,7 @@ describe Api::V1::OrdersController do
       expect(orders_response.size).to eq 4
     end
 
+
     it { should respond_with 200 }
   end
 

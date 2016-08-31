@@ -59,6 +59,7 @@ end
 
 gem 'devise'
 gem 'ransack'
+gem 'kaminari'
 
 # Sabisu integration
 gem 'sabisu_rails'
