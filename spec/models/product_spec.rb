@@ -18,6 +18,9 @@ RSpec.describe Product, type: :model do
 
     it { should belong_to :user }
 
+    it { should have_many(:placements) }
+    it { should have_many(:orders) }
+
     describe ".filter_by_title" do
       before(:each) do
         @product1 = FactoryGirl.create :product, title: "A plasma TV"
@@ -116,4 +119,6 @@ RSpec.describe Product, type: :model do
         end
       end
     end
+
+
 end
